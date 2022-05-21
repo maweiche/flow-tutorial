@@ -1,0 +1,50 @@
+{
+	"emulators": {
+		"default": {
+			"port": 3569,
+			"serviceAccount": "emulator-account"
+		}
+	},
+	"contracts": {
+		"BasicNFT": "./contracts/BasicNFT.cdc",
+		"GarageNFT": "./contracts/GarageNFT.cdc"
+	},
+	"networks": {
+		"emulator": "127.0.0.1:3569",
+		"mainnet": "access.mainnet.nodes.onflow.org:9000",
+		"testnet": "access.devnet.nodes.onflow.org:9000"
+	},
+	"accounts": {
+		"emulator-account": {
+			"address": "f8d6e0586b0a20c7",
+			"key": "6de022fb1be6fe83c2b55e0c0e5c30416ef9ada338839c8de7b48579971dd888"
+		},
+		"testnet-account": {
+			"address": "0xa54eb815f7084b01",
+			"key": {
+				"type": "hex",
+				"index": 0,
+				"signatureAlgorithm": "ECDSA_secp256k1",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "277959cc54ecddded8dd170b3b9a69f43d7d3f5536bbf73aa71518a0cafe9cb0"
+			}
+		},
+		"testnet-account-2": {
+			"address": "0xf271a3ff2530fb08",
+			"key": {
+				"type": "hex",
+				"index": 0,
+				"signatureAlgorithm": "ECDSA_secp256k1",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "f1f8b6374a7954cde0212c1b1f69667031227bb56e0bdee5f1250c557df85954"
+			}
+		}
+	},
+	"deployments": {
+		"testnet": {
+			"testnet-account": [
+				"GarageNFT"
+			]
+		}
+	}
+}
